@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build plugin
-        uses: etriphany/flb-plugin-sdk-action@v1
+        uses: fluent-beats/flb-plugin-sdk-action@v1
         with:
             plugin-path: "./code"
             plugin-name: "in_docker_stats"
