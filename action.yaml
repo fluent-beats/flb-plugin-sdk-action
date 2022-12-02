@@ -1,0 +1,25 @@
+name: 'Fluent Bit SDK Action'
+author: 'etriphany'
+branding:
+  icon: 'server'
+  color: 'blue'
+
+description: 'Run Fluent Bit SDK'
+inputs:
+  plugin-path:
+    description: 'Plugin path'
+    required: true
+  plugin-name:
+    description: 'Plugin name'
+    required: true
+  fluent-bit-version:
+    description: 'Fluent Bit version'
+    required: false
+    default: "1.8.4"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.plugin-path }}
+    - ${{ inputs.plugin-name }}
+    - ${{ inputs.fluent-bit-version }}
