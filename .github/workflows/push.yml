@@ -18,5 +18,5 @@ jobs:
       - name: Test Action
         uses: ./
         with:
-          plugin-path: "./code/example"
+          plugin-path: "./code/test"
           plugin-name: "out_stdout2"
